@@ -5,10 +5,26 @@ Rustをつかって何か作りたかったので簡単な自作コマンドを�
 # 例
 $ happyyear -t 1 -a 0
 ```
+-tでメッセージを指定できます。
+-aで出力するアスキーアートを指定できます。
+
+**コマンドのオプション対応表**
+
+| option | value | description |
+|-------------|-------------|-------------|
+| -t | 0 | メッセージ1 |
+| -t | 1 | メッセージ2 |
+| -t | 2 | メッセージ3 |
+| -a | 0 | 龍 |
+| -a | 1 | 鏡餅 |
+| -a | 2 | 富士山 |
+
+## 対応OS
+Window 64bit
 
 ## 注意事項
 このコマンド実行時にセキュリティブッロクが入ると思いますが、使用する場合は許可してください。
-このコマンドは内部で使用者のグローバルIPを取得し、それを基にロケーション特定、天気取得を行っております。
+このコマンドは内部で使用者のグローバルIPを取得し、それを基にロケーション特定、天気、神社情報取得を行っております。
 情報の収集は行っておりませんが、上記のことをご理解した上でご使用ください。
 
 ## 機能一覧
@@ -21,7 +37,7 @@ $ happyyear -t 1 -a 0
 - 近くの神社を出力する ✅
 
 ### ロケーション特定、気温、天気について
-グローバルIPアドレス取得→API(ロケーション特定)→天気API
+グローバルIPアドレス取得→API(ロケーション特定)→天気APIの順にデータを取得している。
 
 ## 使用したAPI
 - グローバルIPからロケーション特定するAPI
@@ -67,11 +83,20 @@ OpenStreetMap上の情報を取得できます。無料で利用できます。
 - https://www.weatherapi.com/
 ### 地図情報取得API
 - [google map API](https://developers.google.com/maps/?hl=ja)
-- [yahoo map](https://developer.yahoo.co.jp/webapi/map/)
+- [yahoo map](https://developer.yahoo.co.jp/webapi/map/)  
 グローバルIPアドレス取得、ロケーション特定、天気API、地図APIともに他にも色々APIがあるため1つがダメになっても  
 変更はできると思います。
 
 
-# アスキーアートに使用させていただいたサイト
+### アスキーアートに使用させていただいたサイト
+アスキーアート作成ツール
 https://tool-taro.com/image_to_ascii/
+https://rakko.tools/tools/68/
+
+画像
 https://www.ac-illust.com/main/detail.php?id=1133137&word=%E4%B8%AD%E8%8F%AF%E9%A2%A8%E9%BE%8D%E6%9F%84
+https://www.ac-illust.com/main/detail.php?id=24629683&word=%E9%8F%A1%E9%A4%85
+https://www.ac-illust.com/main/detail.php?id=1081788&word=%E8%8A%9D%E6%A1%9C%E3%81%A8%E5%AF%8C%E5%A3%AB%E5%B1%B1#goog_rewarded
+
+### 参考
+https://rust-cli.github.io/book/index.html

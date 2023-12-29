@@ -1,5 +1,7 @@
 # happyYearCLI
 Rustをつかって何か作りたかったので簡単な自作コマンドを作成しました！
+Widows OS 64bitのみ対象です。
+[happyyear.exe](https://github.com/takeru-a/happyYearCLI/blob/main/happyyear.exe)をダウンロードしてください！
 
 ```bash
 # 例
